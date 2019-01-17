@@ -2,7 +2,65 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "",
-  "projects": {},
+  "projects": {
+    "backend-nestjs-app": {
+      "root": "apps/backend/nestjs-app",
+      "sourceRoot": "apps/backend/nestjs-app/src",
+      "projectType": "application",
+      "prefix": "backend-nestjs-app",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/builders:node-build",
+          "options": {
+            "outputPath": "dist/apps/backend/nestjs-app",
+            "main": "apps/backend/nestjs-app/src/main.ts",
+            "tsConfig": "apps/backend/nestjs-app/tsconfig.app.json",
+            "assets": [
+              "apps/backend/nestjs-app/src/assets"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "fileReplacements": [
+                {
+                  "replace": "apps/backend/nestjs-app/src/environments/environment.ts",
+                  "with": "apps/backend/nestjs-app/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/builders:node-execute",
+          "options": {
+            "buildTarget": "backend-nestjs-app:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/backend/nestjs-app/tsconfig.app.json",
+              "apps/backend/nestjs-app/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "apps/backend/nestjs-app/jest.config.js",
+            "tsConfig": "apps/backend/nestjs-app/tsconfig.spec.json"
+          }
+        }
+      }
+    }
+  },
   "cli": {
     "warnings": {
       "typescriptMismatch": false,
