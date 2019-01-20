@@ -7,20 +7,26 @@ import { NestFactory, FastifyAdapter } from '@nestjs/core';
 
 import { AppModule } from './app/app.module';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+import { environment } from './environments/environment';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, new FastifyAdapter());
-  const options = new DocumentBuilder()
+  if (!environment.production) {
+    const options = new DocumentBuilder()
     .setTitle('Swagger Ng Stuttgart')
     .setDescription('The API')
     .setVersion('1.0')
     .addTag('meetup')
     .build();
-  const document = SwaggerModule.createDocument(app, options);
-  SwaggerModule.setup('api-docs', app, document);
+    const document = SwaggerModule.createDocument(app, options);
+    SwaggerModule.setup('api-docs', app, document);
+  }
+
   await app.listen(3333, () => {
     console.log('Listening at http://localhost:3333');
-    console.log('Swagger Listening at http://localhost:3333/api-docs');
+    if (!environment.production) {
+      console.log('Swagger Listening at http://localhost:3333/api-docs');
+    }
   });
 }
 
