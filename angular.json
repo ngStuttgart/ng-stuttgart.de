@@ -3,21 +3,21 @@
   "version": 1,
   "newProjectRoot": "",
   "projects": {
-    "backend-nestjs-app": {
-      "root": "apps/backend/nestjs-app",
-      "sourceRoot": "apps/backend/nestjs-app/src",
+    "nestjs-app": {
+      "root": "apps/nestjs-app",
+      "sourceRoot": "apps/nestjs-app/src",
       "projectType": "application",
-      "prefix": "backend-nestjs-app",
+      "prefix": "nestjs-app",
       "schematics": {},
       "architect": {
         "build": {
           "builder": "@nrwl/builders:node-build",
           "options": {
-            "outputPath": "dist/apps/backend/nestjs-app",
-            "main": "apps/backend/nestjs-app/src/main.ts",
-            "tsConfig": "apps/backend/nestjs-app/tsconfig.app.json",
+            "outputPath": "dist/apps/nestjs-app",
+            "main": "apps/nestjs-app/src/main.ts",
+            "tsConfig": "apps/nestjs-app/tsconfig.app.json",
             "assets": [
-              "apps/backend/nestjs-app/src/assets"
+              "apps/nestjs-app/src/assets"
             ]
           },
           "configurations": {
@@ -26,8 +26,8 @@
               "extractLicenses": true,
               "fileReplacements": [
                 {
-                  "replace": "apps/backend/nestjs-app/src/environments/environment.ts",
-                  "with": "apps/backend/nestjs-app/src/environments/environment.prod.ts"
+                  "replace": "apps/nestjs-app/src/environments/environment.ts",
+                  "with": "apps/nestjs-app/src/environments/environment.prod.ts"
                 }
               ]
             }
@@ -36,15 +36,15 @@
         "serve": {
           "builder": "@nrwl/builders:node-execute",
           "options": {
-            "buildTarget": "backend-nestjs-app:build"
+            "buildTarget": "nestjs-app:build"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "apps/backend/nestjs-app/tsconfig.app.json",
-              "apps/backend/nestjs-app/tsconfig.spec.json"
+              "apps/nestjs-app/tsconfig.app.json",
+              "apps/nestjs-app/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -54,8 +54,8 @@
         "test": {
           "builder": "@nrwl/builders:jest",
           "options": {
-            "jestConfig": "apps/backend/nestjs-app/jest.config.js",
-            "tsConfig": "apps/backend/nestjs-app/tsconfig.spec.json"
+            "jestConfig": "apps/nestjs-app/jest.config.js",
+            "tsConfig": "apps/nestjs-app/tsconfig.spec.json"
           }
         }
       }

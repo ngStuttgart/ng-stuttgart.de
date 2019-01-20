@@ -1,6 +1,5 @@
 import { Injectable, HttpService } from '@nestjs/common';
 import { MEETUP_API_URL } from '../meetup.module';
-import { ajax } from 'rxjs/ajax';
 import { map, catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 import { MeetupGroup } from '../models/group.model';

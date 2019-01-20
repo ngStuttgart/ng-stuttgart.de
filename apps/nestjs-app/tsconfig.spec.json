@@ -1,7 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "../../../dist/out-tsc/apps/backend/nestjs-app",
+    "outDir": "../../../dist/out-tsc/apps/nestjs-app",
     "module": "commonjs",
     "types": ["jest", "node"]
   },

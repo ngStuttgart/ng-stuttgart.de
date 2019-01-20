@@ -4,6 +4,7 @@
     "node_modules/@nrwl/schematics/src/tslint"
   ],
   "rules": {
+    "no-unused-variable": true,
     "arrow-return-shorthand": true,
     "callable-types": true,
     "class-name": true,
