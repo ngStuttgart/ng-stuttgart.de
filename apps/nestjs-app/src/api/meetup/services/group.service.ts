@@ -1,7 +1,7 @@
 import { Injectable, HttpService } from '@nestjs/common';
 import { MEETUP_API_URL } from '../meetup.module';
 import { map, catchError } from 'rxjs/operators';
-import { throwError } from 'rxjs';
+import { throwError, Observable } from 'rxjs';
 import { MeetupGroup } from '../models/group.model';
 import { AxiosResponse } from 'axios';
 
@@ -12,7 +12,7 @@ export class GroupService {
    * @memberof GroupService
    */
   private urlName = 'angular-users-stuttgart';
-  
+
   constructor(private readonly httpService: HttpService) {}
   /**
    * @readonly
@@ -25,10 +25,10 @@ export class GroupService {
    * @returns
    * @memberof GroupService
    */
-  fetchEvent() {
+  fetchEvent(): Observable<MeetupGroup[]> {
     return this.httpService.get(this.eventApiUrl)
     .pipe(
-      map( (eventResponse: AxiosResponse<{0: MeetupGroup}>) => {
+      map( (eventResponse: AxiosResponse) => {
         console.log('event: ', eventResponse);
         return eventResponse.data;
       }),
