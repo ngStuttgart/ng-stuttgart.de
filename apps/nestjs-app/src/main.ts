@@ -20,6 +20,7 @@ async function bootstrap() {
   SwaggerModule.setup('api-docs', app, document);
   await app.listen(3333, () => {
     console.log('Listening at http://localhost:3333');
+    console.log('Swagger Listening at http://localhost:3333/api-docs');
   });
 }
 
