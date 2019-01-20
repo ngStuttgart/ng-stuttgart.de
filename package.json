@@ -46,6 +46,7 @@
     "core-js": "^2.5.4",
     "fastify": "^1.13.4",
     "fastify-formbody": "^2.1.0",
+    "fastify-swagger": "^1.0.0",
     "rxjs": "~6.3.3",
     "zone.js": "^0.8.26"
   },
