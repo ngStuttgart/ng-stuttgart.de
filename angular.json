@@ -16,9 +16,7 @@
             "outputPath": "dist/apps/nestjs-app",
             "main": "apps/nestjs-app/src/main.ts",
             "tsConfig": "apps/nestjs-app/tsconfig.app.json",
-            "assets": [
-              "apps/nestjs-app/src/assets"
-            ]
+            "assets": ["apps/nestjs-app/src/assets"]
           },
           "configurations": {
             "production": {
@@ -46,9 +44,7 @@
               "apps/nestjs-app/tsconfig.app.json",
               "apps/nestjs-app/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "test": {
@@ -56,6 +52,123 @@
           "options": {
             "jestConfig": "apps/nestjs-app/jest.config.js",
             "tsConfig": "apps/nestjs-app/tsconfig.spec.json"
+          }
+        }
+      }
+    },
+    "webpage": {
+      "root": "apps/webpage/",
+      "sourceRoot": "apps/webpage/src",
+      "projectType": "application",
+      "prefix": "ngStuttgart",
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/webpage",
+            "index": "apps/webpage/src/index.html",
+            "main": "apps/webpage/src/main.ts",
+            "polyfills": "apps/webpage/src/polyfills.ts",
+            "tsConfig": "apps/webpage/tsconfig.app.json",
+            "assets": [
+              "apps/webpage/src/favicon.ico",
+              "apps/webpage/src/assets"
+            ],
+            "styles": ["apps/webpage/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/webpage/src/environments/environment.ts",
+                  "with": "apps/webpage/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "webpage:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "webpage:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "webpage:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/webpage/tsconfig.app.json",
+              "apps/webpage/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "apps/webpage/jest.config.js",
+            "tsConfig": "apps/webpage/tsconfig.spec.json",
+            "setupFile": "apps/webpage/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "webpage-e2e": {
+      "root": "apps/webpage-e2e",
+      "projectType": "application",
+      "prefix": "",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/builders:cypress",
+          "options": {
+            "cypressConfig": "apps/webpage-e2e/cypress.json",
+            "tsConfig": "apps/webpage-e2e/tsconfig.e2e.json",
+            "devServerTarget": "webpage:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "webpage:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "apps/webpage-e2e/tsconfig.e2e.json",
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
