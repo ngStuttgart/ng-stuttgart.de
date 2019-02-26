@@ -60,7 +60,7 @@
       "root": "apps/webpage/",
       "sourceRoot": "apps/webpage/src",
       "projectType": "application",
-      "prefix": "ngStuttgart",
+      "prefix": "ng-stuttgart",
       "schematics": {
         "@nrwl/schematics:component": {
           "styleext": "scss"
@@ -79,7 +79,7 @@
               "apps/webpage/src/favicon.ico",
               "apps/webpage/src/assets"
             ],
-            "styles": ["apps/webpage/src/styles.scss"],
+            "styles": ["apps/webpage/src/styles.scss", "_variables.scss", "_mixins.scss"],
             "scripts": []
           },
           "configurations": {
@@ -174,6 +174,7 @@
       }
     }
   },
+  "defaultProject": "webpage",
   "cli": {
     "warnings": {
       "typescriptMismatch": false,

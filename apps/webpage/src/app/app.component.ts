@@ -1,10 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { MediaService } from './core/media.service';
 
 @Component({
-  selector: 'ngStuttgart-root',
+  selector: 'ng-stuttgart-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'webpage';
+export class AppComponent implements OnInit {
+  constructor(private mediaService: MediaService) { }
+
+  ngOnInit(): void {
+    this.mediaService.initBreakpoints();
+  }
 }
