@@ -7,6 +7,6 @@ import { MeetupModule } from '../api/meetup/meetup.module';
 @Module({
   imports: [MeetupModule],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService]
 })
 export class AppModule {}

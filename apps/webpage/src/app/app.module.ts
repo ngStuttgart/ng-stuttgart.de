@@ -11,7 +11,13 @@ import { SideTileComponent } from './home/side-tile/side-tile.component';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, HomeComponent, SideTileComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    HomeComponent,
+    SideTileComponent
+  ],
   imports: [
     BrowserModule,
     NxModule.forRoot(),

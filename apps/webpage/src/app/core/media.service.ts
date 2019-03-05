@@ -97,7 +97,9 @@ export class MediaService {
       };
       let query = `(max-width: ${this.breakpointSizes.sm - 1}px)`;
       if (key !== 'xs' && key !== 'xl') {
-        query = `(min-width: ${this.breakpointSizes[key]}px) and (max-width: ${this.breakpointSizes[keys[index + 1]]}px)`;
+        query = `(min-width: ${this.breakpointSizes[key]}px) and (max-width: ${
+          this.breakpointSizes[keys[index + 1]]
+        }px)`;
       } else if (key === 'xl') {
         query = `(min-width: ${this.breakpointSizes[key]}px)`;
       }
@@ -120,7 +122,9 @@ export class MediaService {
    * @memberof MediaService
    */
   private sizeByAlias(alias: EArBreakpoints) {
-    return this.breakpointSizes[alias] ? this.breakpointSizes[alias] : undefined;
+    return this.breakpointSizes[alias]
+      ? this.breakpointSizes[alias]
+      : undefined;
   }
 
   /**

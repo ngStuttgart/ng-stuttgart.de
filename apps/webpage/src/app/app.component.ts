@@ -7,7 +7,7 @@ import { MediaService } from './core/media.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  constructor(private mediaService: MediaService) { }
+  constructor(private mediaService: MediaService) {}
 
   ngOnInit(): void {
     this.mediaService.initBreakpoints();

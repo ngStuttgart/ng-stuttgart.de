@@ -1,12 +1,12 @@
-@import "variables";
+@import 'variables';
 
-.horse {
+.background-horse {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: -1;
-  background: url("/assets/horse.svg") no-repeat 50% 50%;
+  background: url('/assets/horse.svg') no-repeat 50% 50%;
   margin: 5em;
 }

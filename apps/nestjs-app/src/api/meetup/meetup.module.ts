@@ -9,4 +9,4 @@ export const MEETUP_API_URL = 'https://api.meetup.com';
   providers: [GroupService],
   controllers: [GroupController]
 })
-export class MeetupModule { }
+export class MeetupModule {}

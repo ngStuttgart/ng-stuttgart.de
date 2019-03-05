@@ -26,13 +26,12 @@ export class GroupService {
    * @memberof GroupService
    */
   fetchEvent(): Observable<MeetupGroup[]> {
-    return this.httpService.get(this.eventApiUrl)
-    .pipe(
-      map( (eventResponse: AxiosResponse) => {
+    return this.httpService.get(this.eventApiUrl).pipe(
+      map((eventResponse: AxiosResponse) => {
         console.log('event: ', eventResponse);
         return eventResponse.data;
       }),
-      catchError((error) => {
+      catchError(error => {
         console.error('error: ', error);
         return throwError(error);
       })

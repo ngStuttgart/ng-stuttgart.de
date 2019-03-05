@@ -6,13 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-tile.component.scss']
 })
 export class SideTileComponent implements OnInit {
-
-  date;
+  date: Date;
   host: string;
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor() {
+    this.date = new Date(2019, 3, 28);
+    this.host = 'Bosch';
   }
 
+  ngOnInit() {}
 }

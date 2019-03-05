@@ -1,9 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-@import "variables";
-@import "mixins";
+@import 'variables';
+@import 'mixins';
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }

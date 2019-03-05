@@ -4,17 +4,13 @@ import { MediaService } from './media.service';
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule
-  ]
+  imports: [CommonModule]
 })
 export class CoreModule {
   public static forRoot(): ModuleWithProviders {
     return {
       ngModule: CoreModule,
-      providers: [
-        MediaService
-      ]
-    }
+      providers: [MediaService]
+    };
   }
 }

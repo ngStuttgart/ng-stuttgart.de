@@ -1,0 +1,15 @@
+@import 'variables';
+
+:host {
+  min-height: 3em;
+  padding: 0.5em 1em;
+  background-color: $yellow;
+  position: absolute;
+  right: 0;
+  top: 4em;
+  box-shadow: 10px -10px 0px 0px rgba(0, 0, 0, 0.75);
+}
+
+strong {
+  font-size: 1.3rem;
+}
