@@ -1,0 +1,21 @@
+@import 'variables';
+
+nav {
+  display: flex;
+}
+
+a {
+  color: white;
+  text-transform: uppercase;
+  padding: 1.3em 1em;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: $shadow;
+}
+
+a.active {
+  color: $yellow;
+  font-weight: bold;
+}

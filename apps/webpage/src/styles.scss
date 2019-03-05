@@ -3,6 +3,16 @@
 @import 'mixins';
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+:root {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
 html,
 body {
   margin: 0;
