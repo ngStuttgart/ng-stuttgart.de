@@ -1,0 +1,8 @@
+<main>
+  <ng-stuttgart-ng-badge
+    *ngFor="let teamMember of (teamMembers$ | async)"
+    [name]="teamMember.name"
+    [twitter]="teamMember.twitter"
+    [image]="teamMember.image ? teamMember.image : undefined"
+  ></ng-stuttgart-ng-badge>
+</main>

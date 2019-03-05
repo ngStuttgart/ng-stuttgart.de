@@ -1,0 +1,15 @@
+:host {
+  display: block;
+  background-color: white;
+  min-height: 100vh;
+  padding: 4em;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(auto, 200px));
+  grid-gap: 50px;
+  justify-content: center;
+  max-width: 1500px;
+  margin: 0 auto;
+}

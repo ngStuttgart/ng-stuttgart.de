@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { CoreModule } from './core/core.module';
 import { SideTileComponent } from './home/side-tile/side-tile.component';
 import { AppRoutingModule } from './app-routing.module';
+import { TeamComponent } from './team/team.component';
+import { NgBadgeComponent } from './team/ng-badge/ng-badge.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { AppRoutingModule } from './app-routing.module';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    SideTileComponent
+    SideTileComponent,
+    TeamComponent,
+    NgBadgeComponent
   ],
   imports: [
     BrowserModule,
