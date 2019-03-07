@@ -11,6 +11,7 @@ import { SideTileComponent } from './home/side-tile/side-tile.component';
 import { AppRoutingModule } from './app-routing.module';
 import { TeamComponent } from './team/team.component';
 import { NgBadgeComponent } from './team/ng-badge/ng-badge.component';
+import { JoinComponent } from './join/join.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NgBadgeComponent } from './team/ng-badge/ng-badge.component';
     HomeComponent,
     SideTileComponent,
     TeamComponent,
-    NgBadgeComponent
+    NgBadgeComponent,
+    JoinComponent
   ],
   imports: [
     BrowserModule,
