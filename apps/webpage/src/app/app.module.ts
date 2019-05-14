@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NxModule } from '@nrwl/nx';
 import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { CoreModule } from './core/core.module';
 import { SideTileComponent } from './home/side-tile/side-tile.component';
@@ -17,7 +16,6 @@ import { JoinComponent } from './join/join.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent,
     HomeComponent,
     SideTileComponent,
     TeamComponent,

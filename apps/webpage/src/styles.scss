@@ -22,5 +22,27 @@ body {
 body {
   font-family: $font-family;
   background-color: $dark;
-  height: 100vh;
+}
+
+// main cta button
+.cta {
+  text-transform: uppercase;
+  padding: 0.5em 1.5em;
+  background-color: $yellow;
+  box-shadow: .5em -.5em 0px 0px rgba(0, 0, 0, 0.75);
+}
+
+button.cta {
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+}
+
+button.cta:focus {
+  outline: none;
+}
+
+// helper classes
+.mt-3 {
+  margin-top: 3rem;
 }

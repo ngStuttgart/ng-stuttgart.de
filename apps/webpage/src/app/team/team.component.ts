@@ -20,22 +20,27 @@ export class TeamComponent implements OnInit {
       {
         name: 'Florian Tischler',
         twitter: '@floriantischler',
+        image: 'assets/profiles/25cf5a1c29a3d81d09b3c29a8ffad66b.png'
       },
       {
         name: 'Marco Hämmerle',
-        twitter: '@marcohaemmerle'
+        twitter: '@marcohaemmerle',
+        image: 'assets/profiles/197b3c0a7032750d5b1769c75d45f71b.png'
       },
       {
         name: 'Pascal Brewing',
-        twitter: '@DocMaboos'
+        twitter: '@DocMaboos',
+        image: 'assets/profiles/eaabfc300beb14a1257d6ba9326bb09a.png'
       },
       {
         name: 'Pascal Bayer',
-        twitter: '@PascalBayer'
+        twitter: '@PascalBayer',
+        image: 'assets/profiles/c5b8e259d9332bc0a9f3e7f4e936245a.png'
       },
       {
         name: 'Alexander Schuster',
-        twitter: '@heyitsalex86'
+        twitter: '@heyitsalex86',
+        image: 'assets/profiles/MVIMG_20180618_162813.jpg'
       }
     ]);
   }

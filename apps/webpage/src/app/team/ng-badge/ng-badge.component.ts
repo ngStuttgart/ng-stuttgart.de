@@ -1,9 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'ng-stuttgart-ng-badge',
   templateUrl: './ng-badge.component.html',
-  styleUrls: ['./ng-badge.component.scss']
+  styleUrls: ['./ng-badge.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NgBadgeComponent implements OnInit {
   @Input() name: string;

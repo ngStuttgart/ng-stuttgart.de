@@ -1,12 +1,31 @@
 @import 'variables';
 
-.background-horse {
-  position: absolute;
+:root {
+  --header-height: 80px;
+}
+
+main {
+  display: block;
+  //background-color: white;
+  min-height: calc(100vh - var(--header-height));
+  padding: 4em;
+  margin-top: var(--header-height);
+}
+
+ng-stuttgart-header {
+  position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  background: url('/assets/horse.svg') no-repeat 50% 50%;
-  margin: 5em;
+  width: 100%;
+  height: var(--header-height);
+  padding: 10px 0;
+  z-index: 100;
+}
+
+.bg-dark {
+  background-color: $dark;
+}
+
+.bg-black {
+  background-color: black;
 }

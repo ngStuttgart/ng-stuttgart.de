@@ -1,16 +1,14 @@
 @import 'variables';
 
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 7em 0;
+:host {
+  display: grid;
+  grid-template-rows: minmax(70px, 350px) max-content min-content 1fr;
+  justify-items: center;
+  height: calc(100vh - var(--header-height));
 }
 
 img {
-  width: 30vw;
-  max-width: 500px;
+  height: 100%;
 }
 
 h1 {
@@ -24,4 +22,15 @@ p {
   color: white;
   font-size: 1.5rem;
   margin-top: 0.5em;
+}
+
+.background-horse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: url('/assets/horse.svg') no-repeat 50% 50%;
+  margin: 5em;
 }

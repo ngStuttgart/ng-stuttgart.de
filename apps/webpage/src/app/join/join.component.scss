@@ -1,6 +1,8 @@
+@import 'variables';
+
 :host {
   background-color: white;
-  min-height: 100vh;
+  min-height: 100vh; // TODO subtract header hight??
   padding: 4em;
   display: flex;
   flex-direction: column;
