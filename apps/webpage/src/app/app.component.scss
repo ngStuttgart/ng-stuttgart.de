@@ -1,17 +1,3 @@
-@import 'variables';
-
-:root {
-  --header-height: 80px;
-}
-
-main {
-  display: block;
-  //background-color: white;
-  min-height: calc(100vh - var(--header-height));
-  padding: 4em;
-  margin-top: var(--header-height);
-}
-
 ng-stuttgart-header {
   position: fixed;
   top: 0;
@@ -19,11 +5,11 @@ ng-stuttgart-header {
   width: 100%;
   height: var(--header-height);
   padding: 10px 0;
-  z-index: 100;
+  z-index: 10;
 }
 
 .bg-dark {
-  background-color: $dark;
+  background-color: var(--dark);
 }
 
 .bg-black {

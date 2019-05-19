@@ -1,5 +1,3 @@
-@import 'variables';
-
 nav {
   display: flex;
 }
@@ -12,10 +10,10 @@ a {
 }
 
 a:hover {
-  background-color: $shadow;
+  background-color: var(--shadow);
 }
 
 a.active {
-  color: $yellow;
+  color: var(--yellow);
   font-weight: bold;
 }
