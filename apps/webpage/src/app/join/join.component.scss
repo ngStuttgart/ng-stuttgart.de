@@ -1,17 +1,44 @@
 :host {
-  background-color: white;
-  min-height: 100vh; // TODO subtract header hight??
-  padding: 4em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid:
+    ".    .                 ." minmax(var(--header-height), 2fr)
+    ".    title             ." minmax(min-content, 200px)
+    ".    p1                ." auto
+    ".    p2                ." auto
+    ".    button            ." minmax(min-content, 100px)
+    ".    .                 ." 3fr
+    /auto minmax(0, 850px) auto;
+  grid-gap: 1.5em;
+  place-items: center;
+  height: 100vh;
+  background-color: var(--white);
 }
 
 h1 {
+  font-size: calc(1.5rem + 1vw);
   text-transform: uppercase;
+  margin: 0;
+  grid-area: title;
+}
+
+.first_paragraph {
+  grid-area: p1;
+  align-self: end;
+}
+
+.second_paragraph {
+  grid-area: p2;
+  align-self: start;
+}
+
+a {
+  grid-area: button;
+  align-self: end;
 }
 
 p {
+  font-size: calc(1rem + .5vw);
   text-align: center;
   line-height: 1.5;
+  margin: 0;
 }

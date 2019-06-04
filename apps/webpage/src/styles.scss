@@ -51,6 +51,12 @@ button.cta:focus {
   outline: none;
 }
 
+a.cta {
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
 // helper classes
 .mt-3 {
   margin-top: 3rem;

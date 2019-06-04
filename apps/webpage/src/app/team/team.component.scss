@@ -1,8 +1,7 @@
 :host {
   display: grid;
-  grid-template-rows: var(--header-height) 1fr auto;
-  grid-template-columns: auto minmax(0, 1200px) auto;
-  grid-gap: 30px;
+  grid: var(--header-height) 1fr auto / auto minmax(0, 1200px) auto;
+  grid-gap: 1.5em;
   align-items: center;
   min-height: 100vh;
   background-color: var(--white);
