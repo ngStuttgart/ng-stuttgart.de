@@ -1,7 +1,7 @@
-$img_ratio: 0.9295;
-$img_width: 200px;
-
 :host {
+  --img_ratio: 0.9295;
+  --img_width: 200px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,8 +12,8 @@ $img_width: 200px;
   display: flex;
   margin-bottom: .5em;
   clip-path: polygon(0% 16.575%, 8% 78.1625%, 50% 100%, 92% 78.1625%, 100% 16.575%, 50% 0%);
-  width: $img_width;
-  height: calc(#{$img_width} / #{$img_ratio});
+  width: var(--img_width);
+  height: calc(var(--img_width) / var(--img_ratio));
 }
 
 img {
