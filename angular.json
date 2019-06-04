@@ -79,7 +79,7 @@
               "apps/webpage/src/favicon.ico",
               "apps/webpage/src/assets"
             ],
-            "styles": ["apps/webpage/src/styles.scss", "_mixins.scss"],
+            "styles": ["apps/webpage/src/styles.scss"],
             "scripts": []
           },
           "configurations": {

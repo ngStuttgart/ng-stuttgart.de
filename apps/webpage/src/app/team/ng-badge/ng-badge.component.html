@@ -1,6 +1,14 @@
 <div class="clip-border">
-  <img [src]="image || 'https://picsum.photos/200/200'" alt="picture of {{name}}">
+  <img
+    [src]="image || 'https://picsum.photos/200/200'"
+    alt="picture of {{name}}"
+  />
 </div>
-<div>{{name}}</div>
-<a href="https://twitter.com/{{twitter}}" target="_blank" rel="noopener noreferrer" class="twitter">{{twitter}}</a>
-
+<div>{{ name }}</div>
+<a
+  href="https://twitter.com/{{twitter}}"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="twitter"
+  >{{ twitter }}</a
+>

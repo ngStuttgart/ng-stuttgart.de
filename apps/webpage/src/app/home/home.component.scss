@@ -9,7 +9,7 @@ img {
   height: 100%;
   grid-row: 3;
 
-  @media(max-height: 350px) {
+  @media (max-height: 350px) {
     display: none;
   }
 }

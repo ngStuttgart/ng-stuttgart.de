@@ -1,5 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-@import 'mixins';
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 :root {
@@ -10,9 +9,9 @@
   --black: black;
   --white: white;
   --dark: #343332;
-  --shadow: #2C2C2C;
-  --yellow: #FECE03;
-  --grey: #A3A3A3;
+  --shadow: #2c2c2c;
+  --yellow: #fece03;
+  --grey: #a3a3a3;
 }
 
 *,
@@ -28,8 +27,8 @@ body {
 }
 
 body {
-  font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, 'Lucida Grande',
-  sans-serif;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Helvetica Neue',
+    'Segoe UI', Helvetica, Arial, 'Lucida Grande', sans-serif;
   background-color: var(--dark);
 }
 
@@ -38,7 +37,7 @@ body {
   text-transform: uppercase;
   padding: 0.5em 1.5em;
   background-color: var(--yellow);
-  box-shadow: .5em -.5em 0px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0.5em -0.5em 0px 0px rgba(0, 0, 0, 0.75);
 }
 
 button.cta {
@@ -55,9 +54,5 @@ a.cta {
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: bold;
-}
-
-// helper classes
-.mt-3 {
-  margin-top: 3rem;
+  color: var(--black);
 }
