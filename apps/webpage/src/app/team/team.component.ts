@@ -20,27 +20,27 @@ export class TeamComponent {
       {
         name: 'Florian Tischler',
         twitterHandle: '@floriantischler',
-        imagePath: 'assets/profiles/25cf5a1c29a3d81d09b3c29a8ffad66b.png'
+        imagePath: 'assets/profiles/florian.jpg'
       },
       {
         name: 'Marco Hämmerle',
         twitterHandle: '@marcohaemmerle',
-        imagePath: 'assets/profiles/197b3c0a7032750d5b1769c75d45f71b.png'
+        imagePath: 'assets/profiles/marco.jpg'
       },
       {
         name: 'Pascal Brewing',
         twitterHandle: '@DocMaboos',
-        imagePath: 'assets/profiles/eaabfc300beb14a1257d6ba9326bb09a.png'
+        imagePath: 'assets/profiles/pascal_brewing.jpg'
       },
       {
         name: 'Pascal Bayer',
         twitterHandle: '@PascalBayer',
-        imagePath: 'assets/profiles/c5b8e259d9332bc0a9f3e7f4e936245a.png'
+        imagePath: 'assets/profiles/pascal_bayer.jpg'
       },
       {
         name: 'Alexander Schuster',
         twitterHandle: '@heyitsalex86',
-        imagePath: 'assets/profiles/MVIMG_20180618_162813.jpg'
+        imagePath: 'assets/profiles/alex.jpg'
       }
     ]);
   }
