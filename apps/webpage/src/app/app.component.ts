@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ThemeChangeService } from './theme-change.service';
 
 @Component({
   selector: 'ng-stuttgart-root',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor() {}
+  constructor(private service: ThemeChangeService) {
+  }
 }
