@@ -5,29 +5,15 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { SideTileComponent } from './home/side-tile/side-tile.component';
 import { AppRoutingModule } from './app-routing.module';
-import { TeamComponent } from './team/team.component';
-import { NgBadgeComponent } from './team/ng-badge/ng-badge.component';
-import { JoinComponent } from './join/join.component';
-import { ArchiveComponent } from './archive/archive.component';
-import { EmbeddifyPipe } from './archive/embeddify.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    SideTileComponent,
-    TeamComponent,
-    NgBadgeComponent,
-    JoinComponent,
-    ArchiveComponent,
-    EmbeddifyPipe
+    SideTileComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
+  imports: [BrowserModule, AppRoutingModule],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

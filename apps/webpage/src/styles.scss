@@ -56,3 +56,14 @@ a.cta {
   font-weight: bold;
   color: var(--black);
 }
+
+// reset useragent button styles
+button.no-btn {
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: inherit;
+  outline: none;
+  background-color: var(--white);
+}
