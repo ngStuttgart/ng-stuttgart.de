@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Meetup } from '../archive/archive.component';
 import { Observable, of } from 'rxjs';
+import { Meetup } from '../archive/archive.component';
 
 @Component({
   selector: 'ng-stuttgart-home',

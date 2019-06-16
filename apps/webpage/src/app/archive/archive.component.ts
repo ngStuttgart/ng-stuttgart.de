@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -18,7 +18,8 @@ export interface Meetup {
 @Component({
   selector: 'ng-stuttgart-archive',
   templateUrl: './archive.component.html',
-  styleUrls: ['./archive.component.scss']
+  styleUrls: ['./archive.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ArchiveComponent implements OnInit {
   meetupIndex = 0;

@@ -11,7 +11,7 @@
       "schematics": {},
       "architect": {
         "build": {
-          "builder": "@nrwl/builders:node-build",
+          "builder": "@nrwl/node:build",
           "options": {
             "outputPath": "dist/apps/nestjs-app",
             "main": "apps/nestjs-app/src/main.ts",
@@ -32,7 +32,7 @@
           }
         },
         "serve": {
-          "builder": "@nrwl/builders:node-execute",
+          "builder": "@nrwl/node:execute",
           "options": {
             "buildTarget": "nestjs-app:build"
           }
@@ -48,7 +48,7 @@
           }
         },
         "test": {
-          "builder": "@nrwl/builders:jest",
+          "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "apps/nestjs-app/jest.config.js",
             "tsConfig": "apps/nestjs-app/tsconfig.spec.json"
@@ -137,7 +137,7 @@
           }
         },
         "test": {
-          "builder": "@nrwl/builders:jest",
+          "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "apps/webpage/jest.config.js",
             "tsConfig": "apps/webpage/tsconfig.spec.json",
@@ -152,7 +152,7 @@
       "prefix": "",
       "architect": {
         "e2e": {
-          "builder": "@nrwl/builders:cypress",
+          "builder": "@nrwl/cypress:cypress",
           "options": {
             "cypressConfig": "apps/webpage-e2e/cypress.json",
             "tsConfig": "apps/webpage-e2e/tsconfig.e2e.json",
@@ -180,15 +180,22 @@
       "typescriptMismatch": false,
       "versionMismatch": false
     },
-    "defaultCollection": "@nrwl/schematics",
-    "packageManager": "npm"
+    "defaultCollection": "@nrwl/angular",
+    "packageManager": "yarn"
   },
   "schematics": {
     "@nrwl/schematics:application": {
-      "style": "scss"
+      "style": "scss",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
     },
     "@nrwl/schematics:library": {
-      "style": "scss"
+      "style": "scss",
+      "unitTestRunner": "jest",
+      "framework": "angular"
+    },
+    "@nrwl/schematics:node-application": {
+      "framework": "nest"
     }
   }
 }

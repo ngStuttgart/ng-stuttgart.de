@@ -64,7 +64,10 @@ button.no-btn {
   padding: 0;
   font: inherit;
   color: inherit;
-  cursor: inherit;
-  outline: none;
+  cursor: pointer;
   background-color: var(--white);
+
+  &:active {
+    outline: none;
+  }
 }

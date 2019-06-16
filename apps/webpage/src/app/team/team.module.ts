@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TeamComponent } from './team.component';
-import { NgBadgeComponent } from './ng-badge/ng-badge.component';
+import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { NgBadgeComponent } from './ng-badge/ng-badge.component';
+import { TeamComponent } from './team.component';
 
 @NgModule({
   declarations: [TeamComponent, NgBadgeComponent],

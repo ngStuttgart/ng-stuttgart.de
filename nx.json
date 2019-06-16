@@ -1,5 +1,5 @@
 {
-  "npmScope": "ngStuttgart",
+  "npmScope": "ng-stuttgart",
   "implicitDependencies": {
     "angular.json": "*",
     "package.json": "*",

@@ -14,6 +14,7 @@ import {
 export class NgBadgeComponent implements OnInit {
   @Input() name: string;
   @Input() twitter: string;
+  @Input() company: string;
   @Input() image: string;
 
   constructor() {}
