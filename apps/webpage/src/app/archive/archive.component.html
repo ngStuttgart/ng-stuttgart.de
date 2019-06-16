@@ -1,43 +1,45 @@
-<aside>
-  <ul>
-    <li
-      *ngFor="let meetup of (meetups$ | async); index as i"
-      [class.selected]="i === meetupIndex"
-    >
-      <button
-        class="no-btn"
-        [disabled]="i === meetupIndex"
-        (click)="selectMeetup(i)"
+<ng-container *ngIf="vm$ | async as vm">
+  <aside>
+    <ul>
+      <li
+        *ngFor="let meetup of vm.meetups; index as i"
+        [class.selected]="i === vm.selectedMeetupIndex"
       >
-        {{ meetup.date | date: 'longDate' | uppercase }}
-      </button>
-    </li>
-  </ul>
-</aside>
-<main *ngIf="(selectedMeetup$ | async) as meetup">
-  <h1>{{ meetup.date | date: 'longDate' | uppercase }}</h1>
-  <p class="location">@{{ meetup.location }}</p>
-  <section *ngFor="let talk of meetup.talks">
-    <h2>{{ talk.title }} - {{ talk.author }}</h2>
-    <div
-      *ngIf="(talk.slidesUrl | embeddify); else justlink"
-      class="iframe-container"
-    >
-      <iframe
-        [src]="talk.slidesUrl | embeddify"
-        allowfullscreen="true"
-        mozallowfullscreen="true"
-        webkitallowfullscreen="true"
-      ></iframe>
-    </div>
-    <ng-template #justlink>
-      <a
-        class="slides-link"
-        [href]="talk.slidesUrl"
-        target="_blank"
-        rel="noopener noreferrer"
-        >{{ talk.slidesUrl }}</a
+        <button
+          class="no-btn"
+          [disabled]="i === vm.selectedMeetupIndex"
+          (click)="selectMeetup(i)"
+        >
+          {{ meetup.date | date: 'longDate' | uppercase }}
+        </button>
+      </li>
+    </ul>
+  </aside>
+  <main>
+    <h1>{{ vm.selectedMeetup.date | date: 'longDate' | uppercase }}</h1>
+    <p class="location">@{{ vm.selectedMeetup.location }}</p>
+    <section *ngFor="let talk of vm.selectedMeetup.talks">
+      <h2>{{ talk.title }} - {{ talk.author }}</h2>
+      <div
+        *ngIf="(talk.slidesUrl | embeddify); else justlink"
+        class="iframe-container"
       >
-    </ng-template>
-  </section>
-</main>
+        <iframe
+          [src]="talk.slidesUrl | embeddify"
+          allowfullscreen="true"
+          mozallowfullscreen="true"
+          webkitallowfullscreen="true"
+        ></iframe>
+      </div>
+      <ng-template #justlink>
+        <a
+          class="slides-link"
+          [href]="talk.slidesUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          >{{ talk.slidesUrl }}</a
+        >
+      </ng-template>
+    </section>
+  </main>
+</ng-container>

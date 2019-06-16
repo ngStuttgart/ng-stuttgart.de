@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { BehaviorSubject, combineLatest, Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 interface Talk {
@@ -15,6 +15,12 @@ export interface Meetup {
   talks?: Talk[];
 }
 
+interface MeetupViewModel {
+  meetups: Meetup[];
+  selectedMeetup: Meetup;
+  selectedMeetupIndex: number;
+}
+
 @Component({
   selector: 'ng-stuttgart-archive',
   templateUrl: './archive.component.html',
@@ -22,15 +28,14 @@ export interface Meetup {
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ArchiveComponent implements OnInit {
-  meetupIndex = 0;
-  selectedMeetup$: Observable<Meetup>;
   meetups$: Observable<Meetup[]>;
+  meetupSelectedAction = new BehaviorSubject<number>(0);
+  selectedMeetupIndex$: Observable<number> = this.meetupSelectedAction.asObservable();
+  selectedMeetup$: Observable<Meetup>;
+  vm$: Observable<MeetupViewModel>;
 
   selectMeetup(index: number) {
-    this.meetupIndex = index;
-    this.selectedMeetup$ = this.meetups$.pipe(
-      map((meetups: Meetup[]) => meetups[index])
-    );
+    this.meetupSelectedAction.next(index);
   }
 
   constructor() {}
@@ -218,6 +223,12 @@ export class ArchiveComponent implements OnInit {
       }
     ]);
 
-    this.selectMeetup(0);
+    this.selectedMeetup$ = combineLatest([this.meetups$, this.selectedMeetupIndex$]).pipe(
+      map(([meetups, selectedIndex]: [Meetup[], number]) => meetups[selectedIndex])
+    );
+
+    this.vm$ = combineLatest([this.meetups$, this.selectedMeetup$, this.selectedMeetupIndex$]).pipe(
+      map(([meetups, selectedMeetup, selectedMeetupIndex]) => ({meetups, selectedMeetup, selectedMeetupIndex}))
+    );
   }
 }
