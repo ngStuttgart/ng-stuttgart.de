@@ -172,6 +172,37 @@
           }
         }
       }
+    },
+    "webpage-data-access": {
+      "projectType": "library",
+      "root": "libs/webpage/data-access",
+      "sourceRoot": "libs/webpage/data-access/src",
+      "prefix": "ng-stuttgart",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/webpage/data-access/tsconfig.lib.json",
+              "libs/webpage/data-access/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/webpage/data-access/jest.config.js",
+            "tsConfig": "libs/webpage/data-access/tsconfig.spec.json",
+            "setupFile": "libs/webpage/data-access/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "defaultProject": "webpage",

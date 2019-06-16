@@ -12,10 +12,13 @@
       "tags": []
     },
     "webpage": {
-      "tags": []
+      "tags": ["scope:webpage"]
     },
     "webpage-e2e": {
       "tags": []
+    },
+    "webpage-data-access": {
+      "tags": ["scope:webpage", "type:data-access"]
     }
   }
 }
