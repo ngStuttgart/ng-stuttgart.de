@@ -1,0 +1,48 @@
+:host {
+  --img_ratio: 0.9295;
+  --img_width: 200px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.clip-border {
+  background-color: var(--yellow);
+  display: flex;
+  margin-bottom: 0.5em;
+  clip-path: polygon(
+    0% 16.575%,
+    8% 78.1625%,
+    50% 100%,
+    92% 78.1625%,
+    100% 16.575%,
+    50% 0%
+  );
+  width: var(--img_width);
+  height: calc(var(--img_width) / var(--img_ratio));
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  transform: scale(0.9);
+  transition: transform 1s cubic-bezier(0.5, 0, 0.2, 5);
+  clip-path: polygon(
+    0% 16.575%,
+    8% 78.1625%,
+    50% 100%,
+    92% 78.1625%,
+    100% 16.575%,
+    50% 0%
+  );
+}
+
+.clip-border:hover > img {
+  transform: scale(0.92) rotate(1deg);
+}
+
+.twitter {
+  color: var(--grey);
+  text-decoration: none;
+}

@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'ngStuttgart-root',
+  selector: 'ng-stuttgart-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
-  title = 'webpage';
+  constructor() {}
 }

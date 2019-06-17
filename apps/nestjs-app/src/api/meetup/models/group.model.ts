@@ -47,4 +47,3 @@ export interface MeetupGroup {
   description: string;
   visibility: string;
 }
-

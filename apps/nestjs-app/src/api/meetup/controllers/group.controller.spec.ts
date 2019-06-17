@@ -3,14 +3,16 @@ import { GroupController } from './group.controller';
 
 describe('Group Controller', () => {
   let module: TestingModule;
-  
+
   beforeAll(async () => {
     module = await Test.createTestingModule({
-      controllers: [GroupController],
+      controllers: [GroupController]
     }).compile();
   });
   it('should be defined', () => {
-    const controller: GroupController = module.get<GroupController>(GroupController);
+    const controller: GroupController = module.get<GroupController>(
+      GroupController
+    );
     expect(controller).toBeDefined();
   });
 });
