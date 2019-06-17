@@ -1,21 +1,20 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: 'home', loadChildren: () => import('@ng-stuttgart/webpage/feature/home').then(m => m.WebpageFeatureHomeModule) },
   {
     path: 'team',
-    loadChildren: () => import('./team/team.module').then(m => m.TeamModule)
+    loadChildren: () => import('@ng-stuttgart/webpage/feature/team').then(m => m.WebpageFeatureTeamModule)
   },
   {
     path: 'join',
-    loadChildren: () => import('./join/join.module').then(m => m.JoinModule)
+    loadChildren: () => import('@ng-stuttgart/webpage/feature/join').then(m => m.WebpageFeatureJoinModule)
   },
   {
     path: 'archive',
     loadChildren: () =>
-      import('./archive/archive.module').then(m => m.ArchiveModule)
+      import('@ng-stuttgart/webpage/feature/archive').then(m => m.WebpageFeatureArchiveModule)
   },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];

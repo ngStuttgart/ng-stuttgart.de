@@ -203,6 +203,161 @@
           "styleext": "scss"
         }
       }
+    },
+    "webpage-feature-team": {
+      "projectType": "library",
+      "root": "libs/webpage/feature/team",
+      "sourceRoot": "libs/webpage/feature/team/src",
+      "prefix": "ng-stuttgart",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/webpage/feature/team/tsconfig.lib.json",
+              "libs/webpage/feature/team/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/webpage/feature/team/jest.config.js",
+            "tsConfig": "libs/webpage/feature/team/tsconfig.spec.json",
+            "setupFile": "libs/webpage/feature/team/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "webpage-feature-join": {
+      "projectType": "library",
+      "root": "libs/webpage/feature/join",
+      "sourceRoot": "libs/webpage/feature/join/src",
+      "prefix": "ng-stuttgart",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/webpage/feature/join/tsconfig.lib.json",
+              "libs/webpage/feature/join/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/webpage/feature/join/jest.config.js",
+            "tsConfig": "libs/webpage/feature/join/tsconfig.spec.json",
+            "setupFile": "libs/webpage/feature/join/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "webpage-feature-archive": {
+      "projectType": "library",
+      "root": "libs/webpage/feature/archive",
+      "sourceRoot": "libs/webpage/feature/archive/src",
+      "prefix": "ng-stuttgart",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/webpage/feature/archive/tsconfig.lib.json",
+              "libs/webpage/feature/archive/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/webpage/feature/archive/jest.config.js",
+            "tsConfig": "libs/webpage/feature/archive/tsconfig.spec.json",
+            "setupFile": "libs/webpage/feature/archive/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "webpage-feature-home": {
+      "projectType": "library",
+      "root": "libs/webpage/feature/home",
+      "sourceRoot": "libs/webpage/feature/home/src",
+      "prefix": "ng-stuttgart",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/webpage/feature/home/tsconfig.lib.json",
+              "libs/webpage/feature/home/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/webpage/feature/home/jest.config.js",
+            "tsConfig": "libs/webpage/feature/home/tsconfig.spec.json",
+            "setupFile": "libs/webpage/feature/home/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "webpage-ui-header": {
+      "projectType": "library",
+      "root": "libs/webpage/ui/header",
+      "sourceRoot": "libs/webpage/ui/header/src",
+      "prefix": "ng-stuttgart",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/webpage/ui/header/tsconfig.lib.json",
+              "libs/webpage/ui/header/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/webpage/ui/header/jest.config.js",
+            "tsConfig": "libs/webpage/ui/header/tsconfig.spec.json",
+            "setupFile": "libs/webpage/ui/header/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "defaultProject": "webpage",

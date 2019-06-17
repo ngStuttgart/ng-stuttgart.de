@@ -19,6 +19,21 @@
     },
     "webpage-data-access": {
       "tags": ["scope:webpage", "type:data-access"]
+    },
+    "webpage-feature-team": {
+      "tags": ["type:feature"]
+    },
+    "webpage-feature-join": {
+      "tags": ["type:feature"]
+    },
+    "webpage-feature-archive": {
+      "tags": ["type:feature"]
+    },
+    "webpage-feature-home": {
+      "tags": ["scope:feature"]
+    },
+    "webpage-ui-header": {
+      "tags": ["type:ui"]
     }
   }
 }
