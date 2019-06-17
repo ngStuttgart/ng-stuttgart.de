@@ -1,13 +1,14 @@
-import { Component, Input } from '@angular/core';
-import { Meetup } from '../../archive/archive.component';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { NextMeetup } from '../home.component';
 
 @Component({
   selector: 'ng-stuttgart-side-tile',
   templateUrl: './side-tile.component.html',
-  styleUrls: ['./side-tile.component.scss']
+  styleUrls: ['./side-tile.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SideTileComponent {
-  @Input() meetup: Meetup;
+  @Input() nextMeetup: NextMeetup;
 
   constructor() {}
 }
