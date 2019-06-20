@@ -30,7 +30,9 @@ interface MeetupViewModel {
 export class ArchiveComponent implements OnInit {
   meetups$: Observable<Meetup[]>;
   meetupSelectedAction = new BehaviorSubject<number>(0);
-  selectedMeetupIndex$: Observable<number> = this.meetupSelectedAction.asObservable();
+  selectedMeetupIndex$: Observable<
+    number
+  > = this.meetupSelectedAction.asObservable();
   selectedMeetup$: Observable<Meetup>;
   vm$: Observable<MeetupViewModel>;
 
@@ -221,12 +223,25 @@ export class ArchiveComponent implements OnInit {
       }
     ]);
 
-    this.selectedMeetup$ = combineLatest([this.meetups$, this.selectedMeetupIndex$]).pipe(
-      map(([meetups, selectedIndex]: [Meetup[], number]) => meetups[selectedIndex])
+    this.selectedMeetup$ = combineLatest([
+      this.meetups$,
+      this.selectedMeetupIndex$
+    ]).pipe(
+      map(
+        ([meetups, selectedIndex]: [Meetup[], number]) => meetups[selectedIndex]
+      )
     );
 
-    this.vm$ = combineLatest([this.meetups$, this.selectedMeetup$, this.selectedMeetupIndex$]).pipe(
-      map(([meetups, selectedMeetup, selectedMeetupIndex]) => ({meetups, selectedMeetup, selectedMeetupIndex}))
+    this.vm$ = combineLatest([
+      this.meetups$,
+      this.selectedMeetup$,
+      this.selectedMeetupIndex$
+    ]).pipe(
+      map(([meetups, selectedMeetup, selectedMeetupIndex]) => ({
+        meetups,
+        selectedMeetup,
+        selectedMeetupIndex
+      }))
     );
   }
 }

@@ -77,7 +77,8 @@
             "tsConfig": "apps/webpage/tsconfig.app.json",
             "assets": [
               "apps/webpage/src/favicon.ico",
-              "apps/webpage/src/assets"
+              "apps/webpage/src/assets",
+              "apps/webpage/src/manifest.webmanifest"
             ],
             "styles": ["apps/webpage/src/styles.scss"],
             "scripts": []
@@ -105,7 +106,9 @@
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
                 }
-              ]
+              ],
+              "serviceWorker": true,
+              "ngswConfigPath": "apps/webpage/ngsw-config.json"
             }
           }
         },

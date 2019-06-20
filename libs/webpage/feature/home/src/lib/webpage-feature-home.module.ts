@@ -5,10 +5,10 @@ import { HomeComponent } from './home.component';
 import { SideTileComponent } from './side-tile/side-tile.component';
 
 @NgModule({
-  declarations: [ HomeComponent,
-    SideTileComponent ],
-  imports: [ CommonModule,
-    RouterModule.forChild([ { path: '', component: HomeComponent } ]) ]
+  declarations: [HomeComponent, SideTileComponent],
+  imports: [
+    CommonModule,
+    RouterModule.forChild([{ path: '', component: HomeComponent }])
+  ]
 })
-export class WebpageFeatureHomeModule {
-}
+export class WebpageFeatureHomeModule {}

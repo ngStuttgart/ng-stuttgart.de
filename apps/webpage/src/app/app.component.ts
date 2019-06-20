@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { UpdateService } from './update.service';
 
 @Component({
   selector: 'ng-stuttgart-root',
@@ -6,5 +7,5 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
-  constructor() {}
+  constructor(private updateService: UpdateService) {}
 }

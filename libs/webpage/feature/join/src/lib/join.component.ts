@@ -6,5 +6,4 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrls: ['./join.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class JoinComponent {
-}
+export class JoinComponent {}

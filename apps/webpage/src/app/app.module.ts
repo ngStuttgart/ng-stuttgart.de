@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
+import { ServiceWorkerModule } from '@angular/service-worker';
 import { WebpageDataAccessModule } from '@ng-stuttgart/webpage/data-access';
 import { WebpageUiHeaderModule } from '@ng-stuttgart/webpage/ui/header';
 import { EffectsModule } from '@ngrx/effects';
@@ -11,13 +14,14 @@ import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [ AppComponent ],
   imports: [
     BrowserModule,
     WebpageUiHeaderModule,
+    BrowserAnimationsModule,
+    MatSnackBarModule,
     AppRoutingModule,
     StoreModule.forRoot([], {
       runtimeChecks: {
@@ -34,8 +38,12 @@ import { AppComponent } from './app.component';
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production // Restrict extension to log-only mode
     }),
-    WebpageDataAccessModule
+    WebpageDataAccessModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production
+    })
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
-export class AppModule {}
+export class AppModule {
+}

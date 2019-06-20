@@ -20,7 +20,8 @@ export class HomeComponent implements OnInit {
     this.nextMeetup$ = of({
       date: new Date(2019, 7, 18).toJSON(),
       location: 'Campus Beach',
-      meetupUrl: 'https://www.meetup.com/de-DE/angular-users-stuttgart/events/262122939/'
+      meetupUrl:
+        'https://www.meetup.com/de-DE/angular-users-stuttgart/events/262122939/'
     });
   }
 }
