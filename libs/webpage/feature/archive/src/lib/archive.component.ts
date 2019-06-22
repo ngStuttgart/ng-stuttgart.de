@@ -43,7 +43,7 @@ export class ArchiveComponent implements OnInit {
   ngOnInit() {
     this.meetups$ = of([
       {
-        date: new Date(2019, 6, 5).toJSON(),
+        date: new Date(2019, 5, 5).toJSON(),
         location: 'Bosch',
         talks: [
           {
@@ -61,7 +61,7 @@ export class ArchiveComponent implements OnInit {
         ]
       },
       {
-        date: new Date(2019, 4, 25).toJSON(),
+        date: new Date(2019, 2, 25).toJSON(),
         location: 'Mercedes-Benz.io',
         talks: [
           {
@@ -79,7 +79,7 @@ export class ArchiveComponent implements OnInit {
         ]
       },
       {
-        date: new Date(2019, 3, 28).toJSON(),
+        date: new Date(2019, 2, 28).toJSON(),
         location: 'Bosch',
         talks: [
           {
@@ -101,7 +101,7 @@ export class ArchiveComponent implements OnInit {
         ]
       },
       {
-        date: new Date(2019, 2, 7).toJSON(),
+        date: new Date(2019, 1, 7).toJSON(),
         location: 'Novatec',
         talks: [
           {
@@ -121,7 +121,7 @@ export class ArchiveComponent implements OnInit {
         ]
       },
       {
-        date: new Date(2018, 12, 13).toJSON(),
+        date: new Date(2018, 11, 13).toJSON(),
         location: 'Computer Futures',
         talks: [
           {
@@ -139,7 +139,7 @@ export class ArchiveComponent implements OnInit {
         ]
       },
       {
-        date: new Date(2018, 11, 20).toJSON(),
+        date: new Date(2018, 10, 20).toJSON(),
         location: 'Porsche',
         talks: [
           {
@@ -160,7 +160,7 @@ export class ArchiveComponent implements OnInit {
         ]
       },
       {
-        date: new Date(2018, 10, 18).toJSON(),
+        date: new Date(2018, 9, 18).toJSON(),
         location: 'Kaiser X Labs',
         talks: [
           {
@@ -180,7 +180,7 @@ export class ArchiveComponent implements OnInit {
         ]
       },
       {
-        date: new Date(2018, 7, 26).toJSON(),
+        date: new Date(2018, 6, 26).toJSON(),
         location: 'Adam Riese',
         talks: [
           {
@@ -198,7 +198,7 @@ export class ArchiveComponent implements OnInit {
         ]
       },
       {
-        date: new Date(2018, 5, 17).toJSON(),
+        date: new Date(2018, 4, 17).toJSON(),
         location: 'M-Way Solutions',
         talks: [
           {
@@ -210,7 +210,7 @@ export class ArchiveComponent implements OnInit {
         ]
       },
       {
-        date: new Date(2017, 12, 21).toJSON(),
+        date: new Date(2017, 11, 21).toJSON(),
         location: 'PMC Services',
         talks: [
           {

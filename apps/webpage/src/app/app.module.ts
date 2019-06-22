@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
+import {
+  MatIconModule,
+  MatMenuModule,
+  MatSidenavModule,
+  MatSnackBarModule
+} from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { WebpageDataAccessModule } from '@ng-stuttgart/webpage/data-access';
-import { WebpageUiHeaderModule } from '@ng-stuttgart/webpage/ui/header';
 import { EffectsModule } from '@ngrx/effects';
 import { RouterState, StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreModule } from '@ngrx/store';
@@ -13,15 +17,17 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
-  declarations: [ AppComponent ],
+  declarations: [AppComponent, HeaderComponent],
   imports: [
     BrowserModule,
-    WebpageUiHeaderModule,
     BrowserAnimationsModule,
     MatSnackBarModule,
+    MatSidenavModule,
+    MatMenuModule,
+    MatIconModule,
     AppRoutingModule,
     StoreModule.forRoot([], {
       runtimeChecks: {
@@ -43,7 +49,6 @@ import { AppComponent } from './app.component';
       enabled: environment.production
     })
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule {}

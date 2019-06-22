@@ -1,0 +1,29 @@
+mat-sidenav {
+  min-width: 150px;
+  background-color: var(--header-background);
+  height: 340px;
+  opacity: var(--nav-opacity);
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  margin: .5em;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+a {
+  color: var(--white);
+  padding: 1.4em 1em;
+  text-decoration: none;
+
+  &:hover {
+    background-color: var(--shadow);
+  }
+
+  &.active {
+    color: var(--yellow);
+    font-weight: bold;
+  }
+}

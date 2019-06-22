@@ -28,8 +28,7 @@
       ],
       "@ng-stuttgart/webpage/feature/home": [
         "libs/webpage/feature/home/src/index.ts"
-      ],
-      "@ng-stuttgart/webpage/ui/header": ["libs/webpage/ui/header/src/index.ts"]
+      ]
     },
     "rootDir": "."
   },

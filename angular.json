@@ -330,37 +330,6 @@
           "styleext": "scss"
         }
       }
-    },
-    "webpage-ui-header": {
-      "projectType": "library",
-      "root": "libs/webpage/ui/header",
-      "sourceRoot": "libs/webpage/ui/header/src",
-      "prefix": "ng-stuttgart",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/webpage/ui/header/tsconfig.lib.json",
-              "libs/webpage/ui/header/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/webpage/ui/header/jest.config.js",
-            "tsConfig": "libs/webpage/ui/header/tsconfig.spec.json",
-            "setupFile": "libs/webpage/ui/header/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/angular:component": {
-          "styleext": "scss"
-        }
-      }
     }
   },
   "defaultProject": "webpage",

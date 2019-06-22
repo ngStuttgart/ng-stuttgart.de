@@ -3,10 +3,14 @@
   grid-template-rows: var(--header-height) 1fr minmax(0, 350px) max-content min-content 3fr;
   justify-items: center;
   height: 100vh;
+  position: relative;
+  z-index: 0;
+  background-color: var(--dark);
 }
 
 img {
   height: 100%;
+  width: 70%;
   grid-row: 3;
 
   @media (max-height: 350px) {

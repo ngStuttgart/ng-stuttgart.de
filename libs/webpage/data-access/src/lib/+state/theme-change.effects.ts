@@ -13,8 +13,8 @@ export class ThemeChangeEffects {
         map(({payload}: RouterNavigatedAction) => payload.routerState.url),
         tap((url: string) => {
           url === '/home'
-            ? this.setBackgroundTheme('var(--dark)')
-            : this.setBackgroundTheme('var(--black)');
+            ? this.setTheme('var(--dark)', 'var(--opacity-home)')
+            : this.setTheme('var(--black)', 'var(--opacity-default)');
         })
       ),
     { dispatch: false }
@@ -25,10 +25,15 @@ export class ThemeChangeEffects {
     @Inject(DOCUMENT) private document
   ) {}
 
-  setBackgroundTheme(value: string) {
+  setTheme(background: string, opacity: string) {
     this.document.documentElement.style.setProperty(
       '--header-background',
-      value
+      background
+    );
+
+    this.document.documentElement.style.setProperty(
+      '--nav-opacity',
+      opacity
     );
   }
 }

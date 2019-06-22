@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.nextMeetup$ = of({
-      date: new Date(2019, 7, 18).toJSON(),
+      date: new Date(2019, 6, 18).toJSON(),
       location: 'Campus Beach',
       meetupUrl:
         'https://www.meetup.com/de-DE/angular-users-stuttgart/events/262122939/'

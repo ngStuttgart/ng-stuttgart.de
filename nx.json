@@ -31,9 +31,6 @@
     },
     "webpage-feature-home": {
       "tags": ["scope:feature"]
-    },
-    "webpage-ui-header": {
-      "tags": ["type:ui"]
     }
   }
 }

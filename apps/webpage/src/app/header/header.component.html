@@ -1,4 +1,17 @@
 <nav>
+  <button mat-icon-button (click)="toggleSidenav.next()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <a
+    *ngIf="(notStartpage$ | async)"
+    routerLink="/home"
+    (click)="toggleSidenav.next(false)"
+    mat-icon-button
+    class="logo"
+  >
+    <mat-icon></mat-icon>
+    <span>ngStuttgart</span>
+  </a>
   <a routerLink="/home" routerLinkActive="active">home</a>
   <a routerLink="/team" routerLinkActive="active">team</a>
   <a routerLink="/join" routerLinkActive="active">join</a>

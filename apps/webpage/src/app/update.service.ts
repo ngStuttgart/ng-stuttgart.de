@@ -8,13 +8,13 @@ import { SwUpdate } from '@angular/service-worker';
 export class UpdateService {
   constructor(private swUpdate: SwUpdate, private snackbar: MatSnackBar) {
     this.swUpdate.available.subscribe(() => {
-      const snack = this.snackbar.open('Update Available', 'Reload', { duration: 6000 });
+      const snack = this.snackbar.open('Update Available', 'Reload', {
+        duration: 6000
+      });
 
-      snack
-        .onAction()
-        .subscribe(() => {
-          window.location.reload();
-        });
+      snack.onAction().subscribe(() => {
+        window.location.reload();
+      });
     });
   }
 }
