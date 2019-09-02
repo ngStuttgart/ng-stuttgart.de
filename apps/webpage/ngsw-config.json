@@ -24,9 +24,7 @@
   "dataGroups": [
     {
       "name": "google-docs",
-      "urls": [
-        "https://docs.google.com"
-      ],
+      "urls": ["https://docs.google.com"],
       "cacheConfig": {
         "strategy": "performance",
         "maxAge": "1d",

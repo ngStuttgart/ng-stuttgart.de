@@ -3,7 +3,12 @@
   (toggleSidenav)="sidenav.toggle($event)"
 ></ng-stuttgart-header>
 <mat-sidenav-container>
-  <mat-sidenav role="navigation" #sidenav [fixedInViewport]="true" [fixedTopGap]="80">
+  <mat-sidenav
+    role="navigation"
+    #sidenav
+    [fixedInViewport]="true"
+    [fixedTopGap]="80"
+  >
     <nav (click)="sidenav.close()">
       <a routerLink="/home" routerLinkActive="active">home</a>
       <a routerLink="/team" routerLinkActive="active">team</a>
