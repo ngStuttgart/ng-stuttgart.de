@@ -2,7 +2,7 @@ $breakpoint: 600px;
 
 :host {
   display: grid;
-  grid:
+  grid-template:
     '.' var(--header-height)
     'aside' auto
     'main' 1fr/
@@ -12,7 +12,7 @@ $breakpoint: 600px;
   background: var(--white);
 
   @media (min-width: $breakpoint) {
-    grid:
+    grid-template:
       '.     .   ' var(--header-height)
       'aside main' 1fr /
       230px 1fr;

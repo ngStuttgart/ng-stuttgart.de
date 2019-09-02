@@ -10,7 +10,7 @@ export class ThemeChangeEffects {
     () =>
       this.actions$.pipe(
         ofType(ROUTER_NAVIGATED),
-        map(({payload}: RouterNavigatedAction) => payload.routerState.url),
+        map(({ payload }: RouterNavigatedAction) => payload.routerState.url),
         tap((url: string) => {
           url === '/home'
             ? this.setTheme('var(--dark)', 'var(--opacity-home)')
@@ -20,10 +20,7 @@ export class ThemeChangeEffects {
     { dispatch: false }
   );
 
-  constructor(
-    private actions$: Actions,
-    @Inject(DOCUMENT) private document
-  ) {}
+  constructor(private actions$: Actions, @Inject(DOCUMENT) private document) {}
 
   setTheme(background: string, opacity: string) {
     this.document.documentElement.style.setProperty(
@@ -31,9 +28,6 @@ export class ThemeChangeEffects {
       background
     );
 
-    this.document.documentElement.style.setProperty(
-      '--nav-opacity',
-      opacity
-    );
+    this.document.documentElement.style.setProperty('--nav-opacity', opacity);
   }
 }
