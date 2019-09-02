@@ -16,6 +16,18 @@
     "paths": {
       "@ng-stuttgart/webpage/data-access": [
         "libs/webpage/data-access/src/index.ts"
+      ],
+      "@ng-stuttgart/webpage/feature/team": [
+        "libs/webpage/feature/team/src/index.ts"
+      ],
+      "@ng-stuttgart/webpage/feature/join": [
+        "libs/webpage/feature/join/src/index.ts"
+      ],
+      "@ng-stuttgart/webpage/feature/archive": [
+        "libs/webpage/feature/archive/src/index.ts"
+      ],
+      "@ng-stuttgart/webpage/feature/home": [
+        "libs/webpage/feature/home/src/index.ts"
       ]
     },
     "rootDir": "."

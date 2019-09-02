@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
 :root {
   box-sizing: border-box;
@@ -13,6 +14,11 @@
   --shadow: #2c2c2c;
   --yellow: #fece03;
   --grey: #a3a3a3;
+
+  --nav-opacity: var(--opacity-home);
+
+  --opacity-home: 0.95;
+  --opacity-default: 0.7;
 }
 
 *,
@@ -30,7 +36,6 @@ body {
 body {
   font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Helvetica Neue',
     'Segoe UI', Helvetica, Arial, 'Lucida Grande', sans-serif;
-  background-color: var(--dark);
 }
 
 // main cta button

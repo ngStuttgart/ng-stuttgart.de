@@ -1,6 +1,14 @@
 import { NgModule } from '@angular/core';
+import {
+  MatIconModule,
+  MatMenuModule,
+  MatSidenavModule,
+  MatSnackBarModule
+} from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
+import { ServiceWorkerModule } from '@angular/service-worker';
 import { WebpageDataAccessModule } from '@ng-stuttgart/webpage/data-access';
 import { EffectsModule } from '@ngrx/effects';
 import { RouterState, StoreRouterConnectingModule } from '@ngrx/router-store';
@@ -10,18 +18,16 @@ import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { HomeComponent } from './home/home.component';
-import { SideTileComponent } from './home/side-tile/side-tile.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    HomeComponent,
-    SideTileComponent
-  ],
+  declarations: [AppComponent, HeaderComponent],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    MatSnackBarModule,
+    MatSidenavModule,
+    MatMenuModule,
+    MatIconModule,
     AppRoutingModule,
     StoreModule.forRoot([], {
       runtimeChecks: {
@@ -38,7 +44,10 @@ import { SideTileComponent } from './home/side-tile/side-tile.component';
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production // Restrict extension to log-only mode
     }),
-    WebpageDataAccessModule
+    WebpageDataAccessModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production
+    })
   ],
   bootstrap: [AppComponent]
 })

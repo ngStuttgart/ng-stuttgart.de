@@ -1,0 +1,22 @@
+:host {
+  position: absolute;
+  right: 0;
+  top: 150px;
+  border: 1px solid var(--black);
+}
+
+strong {
+  font-size: 1.3rem;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--black);
+  margin-top: 0.5em;
+  padding: 0.5em 0;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

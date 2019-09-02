@@ -1,30 +1,84 @@
+$show-menu-breakpoint: 500px;
+
 :host {
-  background: var(--header-background);
+  background-color: var(--header-background);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: var(--header-height);
-  padding: 10px 0;
+  padding: .5em;
   z-index: 10;
+  display: flex;
+  align-items: center;
 }
 
 nav {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  @media (min-width: $show-menu-breakpoint) {
+    justify-content: flex-start;
+  }
 }
 
-a {
+a:not(.logo) {
   color: var(--white);
   text-transform: uppercase;
   padding: 1.4em 1em;
   text-decoration: none;
+  display: none;
+
+  &:hover {
+    background-color: var(--shadow);
+  }
+
+  &.active {
+    color: var(--yellow);
+    font-weight: bold;
+  }
+
+  @media (min-width: $show-menu-breakpoint) {
+    display: inline-block;
+  }
 }
 
-a:hover {
-  background-color: var(--shadow);
+a.logo {
+  color: var(--white);
+  padding: 1.4em 1em;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+  & > span {
+    margin-left: 0.5em;
+  }
+
+  & > mat-icon {
+    background: url('/assets/angular-logo.svg');
+  }
+
+  @media (min-width: $show-menu-breakpoint) {
+    display: none;
+  }
 }
 
-a.active {
-  color: var(--yellow);
-  font-weight: bold;
+button {
+  background-color: var(--header-background);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  min-width: 64px;
+  min-height: 64px;
+  //margin-left: .5em;
+
+  &:hover {
+    background-color: var(--shadow);
+  }
+
+  @media (min-width: $show-menu-breakpoint) {
+    display: none;
+  }
 }
