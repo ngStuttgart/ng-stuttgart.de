@@ -143,7 +143,9 @@ export class ArchiveComponent implements OnInit {
           },
           {
             title: 'NestJS with Angular & Server Side Rendering',
-            author: 'Pascal Bayer'
+            author: 'Pascal Brewing',
+            slidesUrl:
+              'https://docs.google.com/presentation/d/1qJkIexo382ZS08lSCPaRv-YxjOF0XhlDjr27zDzhDTo/edit?usp=drivesdk'
           },
           {
             title: 'AngularConnect Review',

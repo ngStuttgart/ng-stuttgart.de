@@ -4,12 +4,13 @@
     alt="picture of {{ name }}"
   />
 </div>
-<div>{{ name }}</div>
-<small>{{ company }}</small>
+<div data-test="badge-name">{{ name }}</div>
+<small data-test="badge-company">{{ company }}</small>
 <a
   href="https://twitter.com/{{ twitter }}"
   target="_blank"
   rel="noopener noreferrer"
   class="twitter"
+  data-test="badge-twitter"
   >{{ twitter }}</a
 >
