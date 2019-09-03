@@ -34,6 +34,7 @@ export class TeamComponent {
       {
         name: 'Pascal Brewing',
         twitterHandle: '@DocMaboos',
+        company: 'Mercedes-Benz.io',
         imagePath: 'assets/profiles/pascal_brewing.jpg'
       },
       {
