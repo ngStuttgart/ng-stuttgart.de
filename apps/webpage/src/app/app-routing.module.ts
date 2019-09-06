@@ -3,7 +3,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const appRoutes: Routes = [
   {
-    path: 'home',
+    path: '',
     loadChildren: () =>
       import('@ng-stuttgart/webpage/feature/home').then(
         m => m.WebpageFeatureHomeModule
@@ -30,7 +30,7 @@ const appRoutes: Routes = [
         m => m.WebpageFeatureArchiveModule
       )
   },
-  { path: '', redirectTo: '/home', pathMatch: 'full' }
+  { path: '**', redirectTo: '/', pathMatch: 'full' }
 ];
 
 @NgModule({

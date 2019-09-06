@@ -2,7 +2,8 @@
 <p data-test="subtitle">The meetup for the Angular community in Stuttgart</p>
 <img src="assets/angular-logo.svg" alt="Angular Stuttgart Logo" />
 <ng-stuttgart-side-tile
-  [nextMeetup]="nextMeetup$ | async"
+  *ngIf="nextMeetup$ | async as nextMeetup"
+  [nextMeetup]="nextMeetup"
   data-test="side-tile"
   class="cta"
 ></ng-stuttgart-side-tile>

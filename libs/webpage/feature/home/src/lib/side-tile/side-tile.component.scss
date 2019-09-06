@@ -3,6 +3,10 @@
   right: 0;
   top: 150px;
   border: 1px solid var(--black);
+
+  @media(max-width: 1060px) {
+    opacity: 0.85;
+  }
 }
 
 strong {

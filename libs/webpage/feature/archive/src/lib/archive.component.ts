@@ -43,6 +43,24 @@ export class ArchiveComponent implements OnInit {
   ngOnInit() {
     this.meetups$ = of([
       {
+        date: new Date(2019, 8, 5).toJSON(),
+        location: 'SPIRIT/21',
+        talks: [
+          {
+            title: 'Multithreading in JavaScript/Angular',
+            author: 'Sven Kinzel'
+          },
+          {
+            title: 'Deep Learning in the Web/Angular',
+            author: 'Pascal Bayer'
+          },
+          {
+            title: 'NG-DE Retrospective',
+            author: 'Imad Lakehal'
+          }
+        ]
+      },
+      {
         date: new Date(2019, 6, 18).toJSON(),
         location: 'Campus Beach',
         talks: [

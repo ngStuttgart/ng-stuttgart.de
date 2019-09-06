@@ -12,7 +12,7 @@ export class ThemeChangeEffects {
         ofType(ROUTER_NAVIGATED),
         map(({ payload }: RouterNavigatedAction) => payload.routerState.url),
         tap((url: string) => {
-          url === '/home'
+          url === '/'
             ? this.setTheme('var(--dark)', 'var(--opacity-home)')
             : this.setTheme('var(--black)', 'var(--opacity-default)');
         })
