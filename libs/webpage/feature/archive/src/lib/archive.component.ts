@@ -52,7 +52,8 @@ export class ArchiveComponent implements OnInit {
           },
           {
             title: 'Deep Learning in the Web/Angular',
-            author: 'Pascal Bayer'
+            author: 'Pascal Bayer',
+            slidesUrl: 'https://docs.google.com/presentation/d/1nAnmUtv1QmzcPXc4KdaGcbNrWGAXQxhNj6ra2M4EplQ/edit?usp=drivesdk'
           },
           {
             title: 'NG-DE Retrospective',
