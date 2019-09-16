@@ -57,7 +57,8 @@ export class ArchiveComponent implements OnInit {
           },
           {
             title: 'NG-DE Retrospective',
-            author: 'Imad Lakehal'
+            author: 'Imad Lakehal',
+            slidesUrl: 'https://www.dropbox.com/s/ozv0yq94f9e0q3l/ngStuttgart_Two.pptx?dl=0'
           }
         ]
       },
