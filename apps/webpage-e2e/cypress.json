@@ -7,5 +7,7 @@
   "video": true,
   "videosFolder": "../../dist/out-tsc/apps/webpage-e2e/videos",
   "screenshotsFolder": "../../dist/out-tsc/apps/webpage-e2e/screenshots",
-  "chromeWebSecurity": false
+  "chromeWebSecurity": false,
+  "viewportWidth": 450,
+  "viewportHeight": 660
 }
