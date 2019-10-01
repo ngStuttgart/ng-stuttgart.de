@@ -23,7 +23,7 @@
       <a routerLink="/archive" routerLinkActive="active">archive</a>
     </nav>
   </mat-sidenav>
-  <mat-sidenav-content role="main">
-    <router-outlet></router-outlet>
+  <mat-sidenav-content role="main" [@routeAnimations]="outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation">
+    <router-outlet #outlet="outlet"></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
