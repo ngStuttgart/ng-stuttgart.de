@@ -11,7 +11,7 @@
     [fixedTopGap]="80"
   >
     <nav (click)="sidenav.close()">
-      <a routerLink="/home" routerLinkActive="active">home</a>
+      <a routerLink="/" routerLinkActive="active">home</a>
       <a routerLink="/team" routerLinkActive="active">team</a>
       <a routerLink="/join" routerLinkActive="active">join</a>
       <a
@@ -23,7 +23,12 @@
       <a routerLink="/archive" routerLinkActive="active">archive</a>
     </nav>
   </mat-sidenav>
-  <mat-sidenav-content role="main" [@routeAnimations]="outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation">
+  <mat-sidenav-content
+    role="main"
+    [@routeAnimations]="
+      outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation
+    "
+  >
     <router-outlet #outlet="outlet"></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

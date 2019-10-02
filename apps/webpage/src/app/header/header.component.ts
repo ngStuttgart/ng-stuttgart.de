@@ -19,7 +19,7 @@ export class HeaderComponent {
   notStartpage$ = this.router.events.pipe(
     filter(e => e instanceof NavigationEnd),
     map((e: NavigationEnd) => e.url),
-    map((url: string) => url !== '/home')
+    map((url: string) => url !== '/')
   );
 
   constructor(private router: Router) {}

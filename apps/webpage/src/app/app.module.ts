@@ -27,7 +27,6 @@ import { HeaderComponent } from './header/header.component';
     MatSnackBarModule,
     MatSidenavModule,
     MatMenuModule,
-    MatIconModule,
     AppRoutingModule,
     StoreModule.forRoot([], {
       runtimeChecks: {

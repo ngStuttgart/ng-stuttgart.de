@@ -48,17 +48,21 @@ export class ArchiveComponent implements OnInit {
         talks: [
           {
             title: 'Multithreading in JavaScript/Angular',
-            author: 'Sven Kinzel'
+            author: 'Sven Kinzel',
+            slidesUrl:
+              'https://docs.google.com/presentation/d/1EaiKapvsOJCbTaieNkNLG_V9dml_FeZL4Y2kvc6mlz4/edit?usp=sharing'
           },
           {
             title: 'Deep Learning in the Web/Angular',
             author: 'Pascal Bayer',
-            slidesUrl: 'https://docs.google.com/presentation/d/1nAnmUtv1QmzcPXc4KdaGcbNrWGAXQxhNj6ra2M4EplQ/edit?usp=drivesdk'
+            slidesUrl:
+              'https://docs.google.com/presentation/d/1nAnmUtv1QmzcPXc4KdaGcbNrWGAXQxhNj6ra2M4EplQ/edit?usp=drivesdk'
           },
           {
             title: 'NG-DE Retrospective',
             author: 'Imad Lakehal',
-            slidesUrl: 'https://www.dropbox.com/s/ozv0yq94f9e0q3l/ngStuttgart_Two.pptx?dl=0'
+            slidesUrl:
+              'https://www.dropbox.com/s/ozv0yq94f9e0q3l/ngStuttgart_Two.pptx?dl=0'
           }
         ]
       },

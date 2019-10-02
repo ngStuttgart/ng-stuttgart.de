@@ -5,8 +5,16 @@
     {
       "name": "app",
       "installMode": "prefetch",
+      "updateMode": "prefetch",
       "resources": {
-        "files": ["/favicon.ico", "/index.html", "/*.css", "/*.js"]
+        "files": [
+          "/favicon.ico",
+          "/index.html",
+          "/*.css",
+          "/*.js",
+          "!/*-es5*.js"
+        ],
+        "urls": ["https://fonts.googleapis.com/**"]
       }
     },
     {
@@ -16,6 +24,7 @@
       "resources": {
         "files": [
           "/assets/**",
+          "/*-es5*.js",
           "/*.(eot|svg|cur|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)"
         ]
       }
@@ -27,7 +36,7 @@
       "urls": ["https://docs.google.com"],
       "cacheConfig": {
         "strategy": "performance",
-        "maxAge": "1d",
+        "maxAge": "1m",
         "maxSize": 100
       }
     }

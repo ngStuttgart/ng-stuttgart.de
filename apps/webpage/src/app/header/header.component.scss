@@ -52,11 +52,13 @@ a.logo {
   align-items: center;
   text-decoration: none;
 
-  & > span {
+  & > .text {
     margin-left: 0.5em;
   }
 
-  & > mat-icon {
+  & > .icon {
+    height: 24px;
+    width: 24px;
     background: url('/assets/angular-logo.svg');
   }
 
@@ -72,6 +74,12 @@ button {
   cursor: pointer;
   min-width: 64px;
   min-height: 64px;
+
+  & > svg {
+    fill: currentColor;
+    height: 24px;
+    width: 24px;
+  }
 
   &:hover {
     background-color: var(--shadow);
