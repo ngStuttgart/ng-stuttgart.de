@@ -11,7 +11,7 @@
     [fixedTopGap]="80"
   >
     <nav (click)="sidenav.close()">
-      <a routerLink="/" routerLinkActive="active">home</a>
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">home</a>
       <a routerLink="/team" routerLinkActive="active">team</a>
       <a routerLink="/join" routerLinkActive="active">join</a>
       <a
