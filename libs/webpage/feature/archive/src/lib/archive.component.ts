@@ -6,6 +6,7 @@ interface Talk {
   title: string;
   author: string;
   slidesUrl?: string;
+  githubUrls?: string[];
   description?: string;
 }
 
@@ -50,13 +51,18 @@ export class ArchiveComponent implements OnInit {
             title: 'Multithreading in JavaScript/Angular',
             author: 'Sven Kinzel',
             slidesUrl:
-              'https://docs.google.com/presentation/d/1EaiKapvsOJCbTaieNkNLG_V9dml_FeZL4Y2kvc6mlz4/edit?usp=sharing'
+              'https://docs.google.com/presentation/d/1EaiKapvsOJCbTaieNkNLG_V9dml_FeZL4Y2kvc6mlz4/edit?usp=sharing',
+            githubUrls: ['https://github.com/svenkin/ng-js-multithreading']
           },
           {
             title: 'Deep Learning in the Web/Angular',
             author: 'Pascal Bayer',
             slidesUrl:
-              'https://docs.google.com/presentation/d/1nAnmUtv1QmzcPXc4KdaGcbNrWGAXQxhNj6ra2M4EplQ/edit?usp=drivesdk'
+              'https://docs.google.com/presentation/d/1nAnmUtv1QmzcPXc4KdaGcbNrWGAXQxhNj6ra2M4EplQ/edit?usp=drivesdk',
+            githubUrls: [
+              'https://github.com/pascalbayer/angular-tfjs',
+              'https://github.com/pascalbayer/tfjs-mnist'
+            ]
           },
           {
             title: 'NG-DE Retrospective',

@@ -40,6 +40,8 @@
           >{{ talk.slidesUrl }}</a
         >
       </ng-template>
+      <a *ngFor="let githubUrl of talk.githubUrls" class="github-link" [href]="githubUrl" target="_blank"
+         rel="noopener noreferrer">{{githubUrl}}</a>
     </section>
   </main>
 </ng-container>

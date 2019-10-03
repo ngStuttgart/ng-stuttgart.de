@@ -87,7 +87,7 @@ h1 {
 }
 
 section + section {
-  margin-top: 5em;
+  margin-top: 4em;
 }
 
 h2 {
@@ -118,4 +118,9 @@ iframe {
 
 .slides-link {
   word-break: break-all;
+}
+
+.github-link {
+  display: block;
+  margin-top: .5em;
 }
