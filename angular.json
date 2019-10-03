@@ -25,6 +25,7 @@
             "assets": [
               "apps/webpage/src/favicon.ico",
               "apps/webpage/src/assets",
+              "apps/webpage/src/robots.txt",
               "apps/webpage/src/manifest.webmanifest"
             ],
             "styles": ["apps/webpage/src/styles.scss"],
