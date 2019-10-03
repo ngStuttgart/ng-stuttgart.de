@@ -12,22 +12,23 @@
       "tags": ["scope:webpage"]
     },
     "webpage-e2e": {
-      "tags": []
+      "tags": ["scope:webpage"],
+      "implicitDependencies": ["webpage"]
     },
     "webpage-data-access": {
       "tags": ["scope:webpage", "type:data-access"]
     },
     "webpage-feature-team": {
-      "tags": ["type:feature"]
+      "tags": ["scope:webpage", "type:feature"]
     },
     "webpage-feature-join": {
-      "tags": ["type:feature"]
+      "tags": ["scope:webpage", "type:feature"]
     },
     "webpage-feature-archive": {
-      "tags": ["type:feature"]
+      "tags": ["scope:webpage", "type:feature"]
     },
     "webpage-feature-home": {
-      "tags": ["scope:feature"]
+      "tags": ["scope:webpage", "type:feature"]
     }
   }
 }
