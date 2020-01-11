@@ -44,6 +44,19 @@ export class ArchiveComponent implements OnInit {
   ngOnInit() {
     this.meetups$ = of([
       {
+        date: new Date(2019, 11, 19).toJSON(),
+        location: 'Computer Futures',
+        talks: [
+          {
+            title:
+              'Blickwinkel auf Accessibility – Evaluation aus Benutzersicht',
+            author: 'Alexander Henka',
+            slidesUrl: '',
+            githubUrls: ['']
+          }
+        ]
+      },
+      {
         date: new Date(2019, 8, 5).toJSON(),
         location: 'SPIRIT/21',
         talks: [
