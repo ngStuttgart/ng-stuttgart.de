@@ -51,7 +51,8 @@ export class ArchiveComponent implements OnInit {
             title:
               'Blickwinkel auf Accessibility – Evaluation aus Benutzersicht',
             author: 'Alexander Henka',
-            slidesUrl: '',
+            slidesUrl:
+              'https://github.com/ngStuttgart/meetup-slides/blob/master/AlexHenka_A11Y_NG_Meetup.pdf',
             githubUrls: ['']
           }
         ]
