@@ -44,6 +44,18 @@ export class ArchiveComponent implements OnInit {
   ngOnInit() {
     this.meetups$ = of([
       {
+        date: new Date(2020, 0, 22).toJSON(),
+        location: 'MHP Management- und IT-Beratung GmbH',
+        talks: [
+          {
+            title: 'Practice makes perfect - when it comes to RxJS',
+            author: 'Jan-Niklas Wortmann',
+            slidesUrl: 'https://rxjs-practice-makes-perfect.dev/',
+            githubUrls: ['']
+          }
+        ]
+      },
+      {
         date: new Date(2019, 11, 19).toJSON(),
         location: 'Computer Futures',
         talks: [
