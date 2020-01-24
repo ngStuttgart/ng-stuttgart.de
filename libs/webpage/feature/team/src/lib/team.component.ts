@@ -40,6 +40,7 @@ export class TeamComponent {
       {
         name: 'Pascal Bayer',
         twitterHandle: '@PascalBayer',
+        company: 'MHP - A Porsche Company',
         imagePath: 'assets/profiles/pascal_bayer.jpg'
       },
       {
