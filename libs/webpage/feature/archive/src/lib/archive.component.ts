@@ -44,6 +44,27 @@ export class ArchiveComponent implements OnInit {
   ngOnInit() {
     this.meetups$ = of([
       {
+        date: new Date(2020, 1, 6).toJSON(),
+        location: 'JW Froehlich Maschinenfabrik GmbH',
+        talks: [
+          {
+            title: 'Angular - BabylonJS Integration Deep Dive',
+            author: 'Max Schulte',
+            slidesUrl:
+              'https://www.thinktecture.com/de/talk/angular-babylonjs-integration-deep-dive-99/',
+            githubUrls: [
+              'https://github.com/thinktecture/angular-babylonjs-architecture'
+            ]
+          },
+          {
+            title: 'Monorepository as an architectural concept',
+            author: 'Yunus Kimyonok',
+            slidesUrl: '',
+            githubUrls: ['']
+          }
+        ]
+      },
+      {
         date: new Date(2020, 0, 22).toJSON(),
         location: 'MHP Management- und IT-Beratung GmbH',
         talks: [

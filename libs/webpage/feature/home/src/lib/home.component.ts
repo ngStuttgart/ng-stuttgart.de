@@ -18,10 +18,10 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.nextMeetup$ = of({
-      date: new Date(2020, 1, 6).toJSON(),
-      location: 'JW Froehlich Maschinenfabrik GmbH',
+      date: new Date(2020, 2, 5).toJSON(),
+      location: 'Novatec',
       meetupUrl:
-        'https://www.meetup.com/angular-users-stuttgart/events/267883723/'
+        'https://www.meetup.com/de-DE/angular-users-stuttgart/events/268985792'
     });
   }
 }
