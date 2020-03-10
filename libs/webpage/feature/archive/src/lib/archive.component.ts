@@ -44,6 +44,22 @@ export class ArchiveComponent implements OnInit {
   ngOnInit() {
     this.meetups$ = of([
       {
+        date: new Date(2020, 2, 5).toJSON(),
+        location: 'Novatec',
+        talks: [
+          {
+            title: 'Something with IntersectionObserver and Dogs',
+            author: 'Jose Antonio Delgado'
+          },
+          {
+            title: 'Updating to Angular 9: Why, when and how?',
+            author: 'Florian Tischler & Alexander Schuster',
+            slidesUrl:
+              'https://docs.google.com/presentation/d/1eUSg2tRHiQN6xicPSRXqP0r5PDeM_CnfNX--ADmLLLI/edit?usp=sharing'
+          }
+        ]
+      },
+      {
         date: new Date(2020, 1, 6).toJSON(),
         location: 'JW Froehlich Maschinenfabrik GmbH',
         talks: [

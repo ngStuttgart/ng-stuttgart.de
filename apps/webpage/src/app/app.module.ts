@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
-import {
-  MatIconModule,
-  MatMenuModule,
-  MatSidenavModule,
-  MatSnackBarModule
-} from '@angular/material';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';

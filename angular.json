@@ -230,7 +230,10 @@
               "libs/webpage/feature/archive/tsconfig.lib.json",
               "libs/webpage/feature/archive/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/webpage/feature/archive/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/webpage/feature/archive/**"
+            ]
           }
         },
         "test": {
