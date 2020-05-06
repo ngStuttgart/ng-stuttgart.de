@@ -17,12 +17,12 @@ export class HomeComponent implements OnInit {
   nextMeetup$: Observable<NextMeetup>;
 
   ngOnInit() {
-    this.nextMeetup$ = NEVER;
-    // this.nextMeetup$ = of({
-    //   date: new Date(2020, 2, 5).toJSON(),
-    //   location: 'Novatec',
-    //   meetupUrl:
-    //     'https://www.meetup.com/de-DE/angular-users-stuttgart/events/268985792'
-    // });
+    // this.nextMeetup$ = NEVER;
+    this.nextMeetup$ = of({
+      date: new Date(2020, 4, 7).toJSON(),
+      location: 'Remote',
+      meetupUrl:
+        'https://www.meetup.com/de-DE/angular-users-stuttgart/events/269928402/'
+    });
   }
 }
