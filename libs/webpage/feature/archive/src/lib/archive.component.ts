@@ -44,6 +44,19 @@ export class ArchiveComponent implements OnInit {
   ngOnInit() {
     this.meetups$ = of([
       {
+        date: new Date(2020, 4, 7).toJSON(),
+        location: 'Remote',
+        talks: [
+          {
+            title: 'Angular + Jamstack with Scully',
+            author: 'Alexander Schuster',
+            slidesUrl:
+              'https://docs.google.com/presentation/d/1j-keheS_bAIQLXwskU_vgnRndjVi08-onnNzfkqghFs/edit#slide=id.p',
+            githubUrls: ['https://github.com/Reaver86/scully-starter']
+          }
+        ]
+      },
+      {
         date: new Date(2020, 2, 5).toJSON(),
         location: 'Novatec',
         talks: [

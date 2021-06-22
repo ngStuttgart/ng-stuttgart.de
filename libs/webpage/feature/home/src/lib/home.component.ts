@@ -19,10 +19,10 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     // this.nextMeetup$ = NEVER;
     this.nextMeetup$ = of({
-      date: new Date(2020, 4, 7).toJSON(),
+      date: new Date(2021, 6, 1).toJSON(),
       location: 'Remote',
       meetupUrl:
-        'https://www.meetup.com/de-DE/angular-users-stuttgart/events/269928402/'
+        'https://www.meetup.com/de-DE/angular-users-stuttgart/events/278805635/'
     });
   }
 }
